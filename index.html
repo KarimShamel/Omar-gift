@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>For Omar ❤️</title>
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="style.css">
+
+    <!-- Google Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&family=Great+Vibes&display=swap" rel="stylesheet">
+
+    <!-- Icons -->
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+</head>
+
+<body>
+
+    <!-- ========================================================= -->
+    <!-- Floating Hearts Background (Generated with JavaScript) -->
+    <!-- ========================================================= -->
+
+    <div id="hearts-container"></div>
+
+    <!-- ========================================================= -->
+    <!-- PASSWORD SCREEN -->
+    <!-- ========================================================= -->
+
+    <div id="passwordOverlay">
+
+        <div class="password-box">
+
+            <h1>❤️</h1>
+
+            <h2>Welcome, Omar</h2>
+
+            <p>
+                Enter the magic word to unlock your special place.
+            </p>
+
+            <!-- Password -->
+            <input
+                type="password"
+                id="passwordInput"
+                placeholder="Magic Word">
+
+            <button id="unlockBtn">
+                Unlock ❤️
+            </button>
+
+            <p class="hint">
+                Hint: It's something we share every day.
+            </p>
+
+            <p id="errorMessage"></p>
+
+        </div>
+
+    </div>
+
+    <!-- ========================================================= -->
+    <!-- AUDIO -->
+    <!-- ========================================================= -->
+
+    <!--
+        Replace music.mp3 with your own song.
+    -->
+
+    <audio id="bgMusic" src="music.mp3"></audio>
+
+    <!-- ========================================================= -->
+    <!-- MAIN CONTENT -->
+    <!-- ========================================================= -->
+
+    <main id="mainContent">
+
+        <!-- ===================================================== -->
+        <!-- HERO -->
+        <!-- ===================================================== -->
+
+        <section class="hero">
+
+            <h1>
+                To My Favorite Human,
+                <span>Omar ❤️</span>
+            </h1>
+
+            <p>
+                Every moment with you has become one of my favorite memories.
+                This little website is only a tiny reminder of how much you mean
+                to me.
+            </p>
+
+            <div class="scrollDown">
+
+                <i class="fa-solid fa-heart"></i>
+
+                <span>Scroll Down</span>
+
+            </div>
+
+        </section>
+
+        <!-- ===================================================== -->
+        <!-- GALLERY -->
+        <!-- ===================================================== -->
+
+        <section class="gallery">
+
+            <!-- ================================================= -->
+            <!-- PHOTO 1 -->
+            <!-- ================================================= -->
+
+            <div class="card reveal">
+
+                <!--
+                    Replace photo1.jpg
+                -->
+
+                <img src="photo1.jpg" alt="Our First Memory">
+
+            </div>
+
+            <!-- ================================================= -->
+            <!-- LOVE LETTER -->
+            <!-- ================================================= -->
+
+            <div class="love-letter reveal">
+
+                <h2>💌 A Letter For You</h2>
+
+                <!-- ================================================= -->
+                <!-- REPLACE THIS LETTER WITH YOUR OWN -->
+                <!-- ================================================= -->
+
+                <p>
+
+                    My dearest Omar,
+
+                </p>
+
+                <p>
+
+                    Every day with you feels like another page of my favorite
+                    love story. You make ordinary moments feel magical and
+                    difficult days feel lighter just by being yourself.
+
+                </p>
+
+                <p>
+
+                    Thank you for every laugh, every hug, every late-night
+                    conversation, every silly joke, every adventure, and every
+                    memory we've created together.
+
+                </p>
+
+                <p>
+
+                    If I could choose all over again,
+                    I would still choose you.
+                    Every single time.
+
+                </p>
+
+                <p>
+
+                    Happy Anniversary ❤️
+
+                </p>
+
+                <p class="signature">
+
+                    Forever Yours ❤️
+
+                </p>
+
+            </div>
+
+            <!-- ================================================= -->
+            <!-- PHOTO 2 -->
+            <!-- ================================================= -->
+
+            <div class="card reveal">
+
+                <img src="photo2.jpg" alt="Memory 2">
+
+            </div>
+
+            <!-- ================================================= -->
+            <!-- PHOTO 3 -->
+            <!-- ================================================= -->
+
+            <div class="card reveal">
+
+                <img src="photo3.jpg" alt="Memory 3">
+
+            </div>
+
+            <!-- ================================================= -->
+            <!-- PHOTO 4 -->
+            <!-- ================================================= -->
+
+            <div class="card reveal">
+
+                <img src="photo4.jpg" alt="Memory 4">
+
+            </div>
+
+            <!-- ================================================= -->
+            <!-- PHOTO 5 -->
+            <!-- ================================================= -->
+
+            <div class="card reveal">
+
+                <img src="photo5.jpg" alt="Memory 5">
+
+            </div>
+
+            <!-- ================================================= -->
+            <!-- VIDEO -->
+            <!-- ================================================= -->
+
+            <div class="video-card reveal">
+
+                <!--
+                    Replace video.mp4
+                -->
+
+                <video controls>
+
+                    <source src="video.mp4" type="video/mp4">
+
+                    Your browser doesn't support videos.
+
+                </video>
+
+            </div>
+
+        </section>
+
+        <!-- ===================================================== -->
+        <!-- ENDING QUOTE -->
+        <!-- ===================================================== -->
+
+        <section class="ending reveal">
+
+            <h2>
+
+                "In all the world, there is no heart for me like yours.
+                In all the world, there is no love for you like mine."
+
+            </h2>
+
+            <p>
+
+                ❤️ I love you today, tomorrow, and always. ❤️
+
+            </p>
+
+        </section>
+
+    </main>
+
+    <!-- ========================================================= -->
+    <!-- STICKY MUSIC PLAYER -->
+    <!-- ========================================================= -->
+
+    <div class="music-player">
+
+        <!-- Play Pause -->
+
+        <button id="playPause">
+
+            <i class="fa-solid fa-play"></i>
+
+        </button>
+
+        <!-- Current Time -->
+
+        <span id="currentTime">
+
+            0:00
+
+        </span>
+
+        <!-- Progress -->
+
+        <input
+            type="range"
+            id="progressBar"
+            value="0"
+            min="0"
+            max="100">
+
+        <!-- Duration -->
+
+        <span id="duration">
+
+            0:00
+
+        </span>
+
+    </div>
+
+    <!-- ========================================================= -->
+    <!-- JAVASCRIPT -->
+    <!-- ========================================================= -->
+
+    <script src="script.js"></script>
+
+</body>
+</html>
