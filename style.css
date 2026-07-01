@@ -1,0 +1,736 @@
+/* ==========================================================
+   FOR OMAR ❤️
+   Romantic Anniversary Website
+   style.css
+   ========================================================== */
+
+/* --------------------------
+   RESET
+--------------------------- */
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+html{
+    scroll-behavior:smooth;
+}
+
+body{
+
+    font-family:'Poppins',sans-serif;
+
+    background:linear-gradient(180deg,
+            #fff7fb 0%,
+            #ffe4ef 35%,
+            #ffd6ea 70%,
+            #fff7fb 100%);
+
+    color:#4d2141;
+
+    overflow-x:hidden;
+
+}
+
+/* ==========================================================
+   FLOATING HEARTS
+========================================================== */
+
+#hearts-container{
+
+    position:fixed;
+    inset:0;
+
+    overflow:hidden;
+
+    pointer-events:none;
+
+    z-index:-1;
+
+}
+
+.heart{
+
+    position:absolute;
+
+    color:rgba(255,105,180,.30);
+
+    animation:floatHeart linear infinite;
+
+}
+
+@keyframes floatHeart{
+
+    from{
+
+        transform:translateY(110vh) rotate(0deg);
+
+        opacity:0;
+
+    }
+
+    15%{
+
+        opacity:1;
+
+    }
+
+    85%{
+
+        opacity:1;
+
+    }
+
+    to{
+
+        transform:translateY(-20vh) rotate(360deg);
+
+        opacity:0;
+
+    }
+
+}
+
+/* ==========================================================
+   PASSWORD OVERLAY
+========================================================== */
+
+#passwordOverlay{
+
+    position:fixed;
+
+    inset:0;
+
+    background:
+        linear-gradient(rgba(255,192,203,.95),
+                        rgba(255,228,240,.96));
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    z-index:9999;
+
+    transition:1s;
+
+}
+
+#passwordOverlay.hide{
+
+    opacity:0;
+
+    visibility:hidden;
+
+}
+
+.password-box{
+
+    width:min(90%,420px);
+
+    background:rgba(255,255,255,.35);
+
+    backdrop-filter:blur(18px);
+
+    border-radius:25px;
+
+    padding:45px;
+
+    text-align:center;
+
+    box-shadow:
+    0 15px 50px rgba(255,105,180,.25);
+
+}
+
+.password-box h1{
+
+    font-size:60px;
+
+    margin-bottom:10px;
+
+}
+
+.password-box h2{
+
+    font-family:'Great Vibes',cursive;
+
+    font-size:42px;
+
+    margin-bottom:15px;
+
+    color:#d63384;
+
+}
+
+.password-box p{
+
+    line-height:1.7;
+
+}
+
+.password-box input{
+
+    width:100%;
+
+    margin-top:25px;
+
+    margin-bottom:18px;
+
+    padding:15px;
+
+    border:none;
+
+    outline:none;
+
+    border-radius:12px;
+
+    font-size:16px;
+
+}
+
+.password-box button{
+
+    width:100%;
+
+    padding:15px;
+
+    border:none;
+
+    cursor:pointer;
+
+    border-radius:12px;
+
+    background:#ff5f9e;
+
+    color:white;
+
+    font-size:16px;
+
+    font-weight:600;
+
+    transition:.3s;
+
+}
+
+.password-box button:hover{
+
+    background:#ff3d87;
+
+    transform:translateY(-2px);
+
+}
+
+.hint{
+
+    margin-top:15px;
+
+    font-size:13px;
+
+    opacity:.7;
+
+}
+
+#errorMessage{
+
+    color:#d8004d;
+
+    margin-top:15px;
+
+    font-weight:600;
+
+}
+
+/* ==========================================================
+   MAIN CONTENT
+========================================================== */
+
+#mainContent{
+
+    opacity:0;
+
+    transition:1.2s;
+
+}
+
+#mainContent.show{
+
+    opacity:1;
+
+}
+
+/* ==========================================================
+   HERO
+========================================================== */
+
+.hero{
+
+    min-height:100vh;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    flex-direction:column;
+
+    text-align:center;
+
+    padding:40px;
+
+}
+
+.hero h1{
+
+    font-size:65px;
+
+    font-family:'Great Vibes',cursive;
+
+    color:#d63384;
+
+    animation:fadeDown 1.3s;
+
+}
+
+.hero span{
+
+    display:block;
+
+    margin-top:15px;
+
+    color:#ff4b97;
+
+}
+
+.hero p{
+
+    max-width:750px;
+
+    margin-top:30px;
+
+    line-height:1.9;
+
+    font-size:20px;
+
+}
+
+.scrollDown{
+
+    margin-top:60px;
+
+    animation:bounce 2s infinite;
+
+    color:#ff5c99;
+
+}
+
+.scrollDown i{
+
+    font-size:35px;
+
+    display:block;
+
+    margin-bottom:10px;
+
+}
+
+@keyframes fadeDown{
+
+    from{
+
+        transform:translateY(-40px);
+
+        opacity:0;
+
+    }
+
+    to{
+
+        transform:translateY(0);
+
+        opacity:1;
+
+    }
+
+}
+
+@keyframes bounce{
+
+    0%,100%{
+
+        transform:translateY(0);
+
+    }
+
+    50%{
+
+        transform:translateY(10px);
+
+    }
+
+}
+
+/* ==========================================================
+   GALLERY
+========================================================== */
+
+.gallery{
+
+    width:min(1100px,92%);
+
+    margin:auto;
+
+}
+
+.card{
+
+    margin:80px auto;
+
+}
+
+.card img{
+
+    width:100%;
+
+    border-radius:25px;
+
+    box-shadow:
+    0 20px 45px rgba(255,105,180,.20);
+
+    transition:.4s;
+
+}
+
+.card img:hover{
+
+    transform:scale(1.03);
+
+}
+
+.video-card{
+
+    margin:90px auto;
+
+}
+
+.video-card video{
+
+    width:100%;
+
+    border-radius:25px;
+
+    box-shadow:
+    0 20px 45px rgba(255,105,180,.20);
+
+}
+
+/* ==========================================================
+   LOVE LETTER
+========================================================== */
+
+.love-letter{
+
+    background:white;
+
+    border-radius:25px;
+
+    padding:50px;
+
+    margin:80px auto;
+
+    box-shadow:
+    0 15px 45px rgba(255,105,180,.18);
+
+}
+
+.love-letter h2{
+
+    text-align:center;
+
+    color:#d63384;
+
+    font-family:'Great Vibes',cursive;
+
+    font-size:48px;
+
+    margin-bottom:30px;
+
+}
+
+.love-letter p{
+
+    margin-bottom:18px;
+
+    line-height:2;
+
+    font-size:18px;
+
+}
+
+.signature{
+
+    text-align:right;
+
+    font-weight:bold;
+
+    color:#ff4f93;
+
+}
+
+/* ==========================================================
+   ENDING
+========================================================== */
+
+.ending{
+
+    text-align:center;
+
+    padding:120px 30px 150px;
+
+}
+
+.ending h2{
+
+    font-family:'Great Vibes',cursive;
+
+    font-size:52px;
+
+    color:#d63384;
+
+    line-height:1.5;
+
+}
+
+.ending p{
+
+    margin-top:30px;
+
+    font-size:22px;
+
+}
+
+/* ==========================================================
+   PLAYER
+========================================================== */
+
+.music-player{
+
+    position:fixed;
+
+    bottom:0;
+
+    left:0;
+
+    width:100%;
+
+    background:rgba(255,255,255,.92);
+
+    backdrop-filter:blur(18px);
+
+    display:flex;
+
+    align-items:center;
+
+    gap:15px;
+
+    padding:18px 22px;
+
+    box-shadow:0 -5px 20px rgba(0,0,0,.08);
+
+    z-index:999;
+
+}
+
+.music-player button{
+
+    width:50px;
+
+    height:50px;
+
+    border:none;
+
+    border-radius:50%;
+
+    background:#ff4d91;
+
+    color:white;
+
+    cursor:pointer;
+
+    font-size:18px;
+
+    transition:.3s;
+
+}
+
+.music-player button:hover{
+
+    transform:scale(1.08);
+
+}
+
+.music-player span{
+
+    width:55px;
+
+    text-align:center;
+
+    font-size:14px;
+
+}
+
+#progressBar{
+
+    flex:1;
+
+    accent-color:#ff4d91;
+
+    cursor:pointer;
+
+}
+
+/* ==========================================================
+   REVEAL ANIMATION
+========================================================== */
+
+.reveal{
+
+    opacity:0;
+
+    transform:translateY(80px);
+
+    transition:1s;
+
+}
+
+.reveal.active{
+
+    opacity:1;
+
+    transform:translateY(0);
+
+}
+
+/* ==========================================================
+   RESPONSIVE
+========================================================== */
+
+@media(max-width:900px){
+
+.hero h1{
+
+    font-size:50px;
+
+}
+
+.hero p{
+
+    font-size:18px;
+
+}
+
+.love-letter{
+
+    padding:35px;
+
+}
+
+.love-letter h2{
+
+    font-size:40px;
+
+}
+
+.ending h2{
+
+    font-size:42px;
+
+}
+
+}
+
+@media(max-width:600px){
+
+.password-box{
+
+    padding:30px;
+
+}
+
+.password-box h2{
+
+    font-size:34px;
+
+}
+
+.hero{
+
+    padding:25px;
+
+}
+
+.hero h1{
+
+    font-size:38px;
+
+}
+
+.hero p{
+
+    font-size:16px;
+
+}
+
+.love-letter{
+
+    padding:25px;
+
+}
+
+.love-letter p{
+
+    font-size:16px;
+
+}
+
+.ending{
+
+    padding:80px 20px 120px;
+
+}
+
+.ending h2{
+
+    font-size:34px;
+
+}
+
+.music-player{
+
+    padding:12px;
+
+    gap:8px;
+
+}
+
+.music-player button{
+
+    width:45px;
+
+    height:45px;
+
+}
+
+.music-player span{
+
+    width:45px;
+
+    font-size:12px;
+
+}
+
+}
